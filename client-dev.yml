@@ -6,5 +6,9 @@ eureka:
 spring:
   application:
     name: client
+  rabbitmq:
+    host: localhost:15672
+    username: guest
+    password: guest
 env: 
   dev

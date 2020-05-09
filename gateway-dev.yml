@@ -1,11 +1,11 @@
+zuul:
+  routes:
+    myClient:
+      path: /myClient/**
+      serviceId: client  
 env: 
   dev
 eureka:
  client:
   service-url:
-   defaultZone: http://localhost:8761/eureka/
-zuul:
-  routes:
-    myClient:
-      path: /myClient/**
-      serviceId: client   
+   defaultZone: http://localhost:8761/eureka/ 

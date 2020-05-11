@@ -1,8 +1,9 @@
-zuul:
-  routes:
-    myClient:
-      path: /myClient/**
-      serviceId: client  
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 env: 
   dev
 eureka:
@@ -14,3 +15,12 @@ management:
     web:
       exposure:
         include: '*'
+zuul:
+  routes:
+    myClient:
+      path: /myClient/**
+      serviceId: client
+      # 设置可以传递请求头
+      sensitiveHeaders:
+  ignored-patterns:
+      - /**/getServerResult
